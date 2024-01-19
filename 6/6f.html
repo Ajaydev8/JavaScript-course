@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>6f.html</title>
+  </head>
+
+  <body>
+
+    <script>
+      randomNumber = Math.random();
+      guess = 'heads';
+
+      // Ternary Condition for random number to be less than half or more than half
+      (randomNumber <= 1/2) ? result='heads' : result='tails';
+      
+      // Ternary Condition
+      (guess === result) ? console.log('You win!') : console.log('You Loose!');
+
+    </script>
+  </body>
+</html>
