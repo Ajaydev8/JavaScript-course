@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>convertTemperature</title>
+  </head>
+
+  <body>
+
+    <script>
+      function convertTemperature(degrees, unit) {
+          if (unit === 'F') {
+          degreeCelsius = (degrees - 32) * 5/9;
+
+          console.log(`${degreeCelsius}C`);
+        } else if (unit === 'C') {
+
+          fahrenheit = (degrees * 9/5) + 32;
+
+          console.log(`${fahrenheit}F`);
+        }
+      }
+
+      convertTemperature(30, 'C');
+    </script>
+  </body>
+</html>
