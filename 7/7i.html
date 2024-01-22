@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>7i-functions-and-parameters-and return Funcitons</title>
+  </head>
+
+  <body>
+    <p>Cart Quantity</p>
+
+    <button class="show-quantity"
+    onclick="
+    console.log(`Cart Quantity: ${cartQuantity}`);
+    ">
+      Show Quantity
+    </button>
+
+    <button class="add-to-cart"
+    onclick="
+    updateCartQuantity(1);
+    ">
+      Add to Cart
+    </button>
+
+    <button class="remove-from-cart"
+    onclick=" 
+      updateCartQuantity(-1);">
+      Remove from Cart
+    </button>
+
+    <button class="+2"
+    onclick="
+    updateCartQuantity(2);
+    ">
+      +2
+    </button>
+
+    <button class="+3"
+    onclick="
+    updateCartQuantity(3);
+    ">
+      +3
+    </button>
+
+    <button onclick="
+    updateCartQuantity(4);
+    ">
+      +4
+    </button>
+
+    <button onclick="
+    updateCartQuantity(5);
+    ">
+      +5
+    </button>
+
+    <button onclick="
+    updateCartQuantity(-2);
+    ">
+      -2
+    </button>
+
+    <button onclick="
+      updateCartQuantity(-3);">
+      -3
+    </button>
+
+    <button class="reset cart"
+    onclick="
+    cartQuantity = 0;
+    console.log(`Cart Quantity was reset.`)
+    console.log(`Cart Quantity: ${cartQuantity}`)">
+      Reset Cart
+    </button>
+
+    <script>
+      let cartQuantity = 0;
+
+      function updateCartQuantity(change) {
+        if (cartQuantity + change > 10) {
+          alert('The cart is full.');
+          return;
+        }
+
+        if (cartQuantity + change < 0) {
+          alert('Not enough Items in Cart.')
+          return;
+        };
+
+        cartQuantity += change;
+        console.log(`Cart Quantity: ${cartQuantity}`);
+         } 
+      
+    </script>
+  </body>
+</html>
