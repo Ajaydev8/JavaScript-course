@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Objects</title>
+    
+  </head>
+  <body>
+
+    <script>
+
+      /*
+      const product = {
+        name: 'socks',
+        price: 1090
+      }
+
+      console.log(product);
+      console.log(product.name);
+      console.log(product.price);
+
+      /*const calaculateTax = ((product.price * 100) * 0.1) / 100;
+
+      let fullCost = product.price + calaculateTax;
+
+      console.log(fullCost);
+
+      product.name = 'CottonSocks';
+      console.log(product);
+
+      product.country = 'India';
+      console.log(product.country);
+      console.log(product);
+
+      delete product.country;
+      console.log(product);
+      */
+
+      /*
+      // Nested Object
+      product2 = {
+        name: 'shirt',
+        'delivery-time': '2 days',
+        // Object inside an Object
+        rating: {
+          stars: 4.7,
+          count: 87,
+          user_review: 'positive',
+        },
+        // Function inside an Object
+        fun: function function1() {
+          console.log('Function inside Object.')
+        }
+      }
+
+      console.log(product2);
+      console.log(product2.name);
+      // same but with the square bracket
+      console.log(product2['name']);
+
+      // console.log(product2.delivery-time);
+      // To get the access of the keys like delivery-time we use sqaure brackets because . take it as a - sign.
+      console.log(product2['delivery-time']);
+
+      console.log(product2.rating.count);
+      product2.fun();
+
+      console.log(typeof console.log());
+
+      // To convert JS object to JSON 
+      console.log(JSON.stringify(product2));
+
+      // To convert JSON to JS object
+      const jsonString = JSON.stringify(product2);
+
+      console.log(JSON.parse(jsonString));
+      */
+
+      console.log('hello'.length);
+      console.log('hello'.toUpperCase());
+
+      // Objects are only reference points
+      const object1 = {
+        message: 'hello'
+      }
+      // object2 is not the copy of the object1 but the Copy of the reference.
+      const object2 = object1;
+
+      // object's messege changed even thought it is const value because object is reference so It does not change the reference but It does not stop us from reaching inside the object.
+      object1.message = 'Good Job!';
+      console.log(object1);
+      console.log(object2);
+
+      const object3 = {
+        message: 'Good Job!',
+      };
+
+      // It's not equal because remember the object is a reference and object3 is a new reference to the new message created.
+      console.log(object3 === object1);
+
+      // This is true because they are the same reference.
+      console.log(object1 === object2);
+
+      // If we compare the object1 and object3 value, they are the same.
+      console.log(object3.message === object1.message);
+
+      const object4 = {
+        message: 'Good Job!',
+        price: 799
+      };
+
+      // const message = object4.messege
+
+      // This will take the message property out of the object4 and save it in message. same as above.
+      // we can use it for multiple properties
+      const { message, price } = object4 
+      console.log(message);
+      console.log(price);
+
+      const object5 = {
+        message,
+        // method: function function1() {
+        //   console.log('method');
+        // },
+        method() {
+          console.log('method');
+        } 
+      };
+      console.log(object5);
+      object5.method();
+    </script> 
+  </body>
+</html>
