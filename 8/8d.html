@@ -18,12 +18,12 @@
       }
 
       // Returns the product that is less expensive
-      function comparePrice() {
-        (product1.price > product2.price) ? console.log(product2) : console.log(product1);
+      function comparePrice(product1, product2) {
+        (product1.price > product2.price) ? console.log(`${product2.name}: ${product2.price}`) : console.log(`${product1.name}: ${product1.price}`);
       }
 
       // Calling the function
-      comparePrice();
+      comparePrice(product1, product2);
     </script>
 
   </body>
