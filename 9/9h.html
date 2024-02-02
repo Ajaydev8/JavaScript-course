@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>9e-exercise</title>
+  </head>
+
+  <body>
+
+    <input placeholder="write-something" class="js-input-text" onkeyup="
+        handleUpdateText(event);
+      ">
+
+    <p class="js-updated-text"></p>
+
+    <script>
+      function handleUpdateText() {
+        const inputText = document.querySelector('.js-input-text');
+
+        const text = inputText.value
+
+        document.querySelector('.js-updated-text')
+          .innerHTML = text;
+      }
+    </script>
+  </body>
+</html>
