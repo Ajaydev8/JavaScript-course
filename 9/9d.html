@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>9d-exercise</title>
+  </head>
+
+  <body>
+
+    <input placeholder="Name" class="js-name-input">
+
+    <button onclick="
+    displayName();
+    ">
+      submit
+    </button>
+
+    <p class="js-display-name"></p>
+    <script>
+      function displayName() {
+        const nameInput = document.querySelector('.js-name-input')
+
+        const name = nameInput.value;
+
+        document.querySelector('.js-display-name')
+          .innerHTML = `Your name is ${name}.`;
+      }
+    </script>
+  </body>
+</html>
