@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>9e-exercise</title>
+  </head>
+
+  <body>
+
+    <input placeholder="Name" class="js-name-input" 
+    onkeydown="handleNameKeydown(event);">
+
+    <button onclick="
+    displayName();
+    ">
+      submit
+    </button>
+
+    <p class="js-display-name"></p>
+    <script>
+      function handleNameKeydown() {
+        if (event.key === 'Enter') {
+          displayName();
+        } else {
+          console.log('Typing');
+        }
+      }
+
+      function displayName() {
+        const nameInput = document.querySelector('.js-name-input')
+
+        const name = nameInput.value;
+
+        document.querySelector('.js-display-name')
+          .innerHTML = `Your name is ${name}.`;
+      }
+    </script>
+  </body>
+</html>
