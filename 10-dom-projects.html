@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM-project</title>
+
+    <style>
+        * {
+            font-family: Arial;
+        }
+
+        .js-subscribe-button {
+            background-color: black;
+            color: white;
+            padding: 12px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 14px;
+            border: none;
+            margin-bottom: 30px;
+            cursor: pointer;
+        }
+
+        .is-subscribed {
+            background-color: rgb(240, 240, 240);
+            color: black;
+        }
+
+        .js-cost-input {
+            padding: 12px 15px;
+            font-size: 15px;
+        }
+
+        .calculate-button {
+            padding: 12px 15px;
+            background-color: green;
+            border: none;
+            color: white;
+            font-size: 17px;
+            cursor: pointer;
+        }
+
+        
+    </style>
+    
+  </head>
+  <body>
+    <p>YouTube Subscribe Button</p>
+    <button class="js-subscribe-button" onclick="
+    subscribe();
+    ">
+    Subscribe
+  </button>
+  
+
+  <p>Amazon Shipping Calculator</p>
+  <p>Orders under $40= +$10 shipping</p>
+  <p>Orders over $40 = FREE shipping</p>
+  <input class="js-cost-input" placeholder="Cost of order" onkeydown="
+  handleCostKeyDown(event);
+  ">
+  <button class="calculate-button" onclick="
+  calculate()">
+    calculate
+  </button>
+  <p class="js-display-cost" 
+  ></p>
+    
+
+    <script>
+      String(25);
+      console.log(String(40) - 10);
+
+      console.log(window.document);
+      window.console.log('window');
+      
+
+      function handleCostKeyDown(event) {
+        if (event.key === 'Enter') {
+        calculate();
+        }
+      }
+
+      function subscribe() {
+        const buttonElement = document.querySelector('.js-subscribe-button');
+
+        if (buttonElement.innerText === 'Subscribe') {
+          buttonElement.innerText = 'Subscribed';
+          buttonElement.classList.add('is-subscribed'); //classList is property just like innerHTML
+        } else {
+          buttonElement.innerText = 'Subscribe'
+          buttonElement.classList.remove('is-subscribed'); //removes the class so it goes on back to original class.
+        }
+      }
+
+      function calculate() {
+        const costInput = document.querySelector('.js-cost-input');
+        const displayCost = document.querySelector('.js-display-cost')
+
+        // Get the value from the Input
+        const cost = Number(costInput.value);
+
+        if (cost < 40) {
+          displayCost.innerHTML = `$${cost + 10}`;
+        } else if (cost >= 40) {
+          displayCost.innerHTML = `$${cost}`;
+        } else {
+          displayCost.innerHTML = `Please input a valid number`;
+        }
+      }
+    </script> 
+  </body>
+</html>
